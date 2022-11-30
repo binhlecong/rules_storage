@@ -127,6 +127,42 @@
       "highlight_type": "WARNING"
     },
     {
+      "id": "ECGenParameterSpec",
+      "brief_description": "Cryptographic keys should be robust",
+      "inspector": {
+        "pattern": "ECGenParameterSpec\\((.*?)\\)",
+        "group_patterns": [
+          "(secp112r1)"
+        ]
+      },
+      "fixes": [
+        {
+          "name": "Improve security",
+          "patterns": [
+            "(secp112r1)"
+          ],
+          "strings": [
+            "secp224k1"
+          ]
+        }
+      ],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "DriverManagerGetConnection",
+      "brief_description": "A secure password should be used when connecting to a database",
+      "inspector": {
+        "pattern": "DriverManager.getConnect\\((.*?),(.*?),(.*?)\\)",
+        "group_patterns": [
+          null,
+          null,
+          "()"
+        ]
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
       "id": "PredictableRandom",
       "brief_description": "Predictable pseudorandom number generator",
       "inspector": {
