@@ -83,6 +83,50 @@
       "highlight_type": "WARNING"
     },
     {
+      "id": "KeyPairInit",
+      "brief_description": "Cryptographic keys should be robust",
+      "inspector": {
+        "pattern": "KeyPairGenerator.initialize\\((.*?)\\)",
+        "group_patterns": [
+          "(1024)"
+        ]
+      },
+      "fixes": [
+        {
+          "name": "Improve security",
+          "patterns": [
+            "(1024)"
+          ],
+          "strings": [
+            "2048"
+          ]
+        }
+      ],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "KeyInit",
+      "brief_description": "Cryptographic keys should be robust",
+      "inspector": {
+        "pattern": "KeyGenerator.init\\((.*?)\\)",
+        "group_patterns": [
+          "(64)"
+        ]
+      },
+      "fixes": [
+        {
+          "name": "Improve security",
+          "patterns": [
+            "(64)"
+          ],
+          "strings": [
+            "128"
+          ]
+        }
+      ],
+      "highlight_type": "WARNING"
+    },
+    {
       "id": "PredictableRandom",
       "brief_description": "Predictable pseudorandom number generator",
       "inspector": {
