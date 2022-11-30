@@ -23,6 +23,66 @@
       "highlight_type": "WARNING"
     },
     {
+      "id": "SensitiveDataLoggingW",
+      "brief_description": "Sensitive data may be logged",
+      "inspector": {
+        "pattern": "Log.w\\((.*?)\\)",
+        "group_patterns": [
+          "(.*pass.*)|(.*pw.*)"
+        ]
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "SensitiveDataLoggingD",
+      "brief_description": "Sensitive data may be logged",
+      "inspector": {
+        "pattern": "Log.d\\((.*?)\\)",
+        "group_patterns": [
+          "(.*pass.*)|(.*pw.*)"
+        ]
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "SensitiveDataLoggingE",
+      "brief_description": "Sensitive data may be logged",
+      "inspector": {
+        "pattern": "Log.e\\((.*?)\\)",
+        "group_patterns": [
+          "(.*pass.*)|(.*pw.*)"
+        ]
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "SensitiveDataLoggingI",
+      "brief_description": "Sensitive data may be logged",
+      "inspector": {
+        "pattern": "Log.i\\((.*?)\\)",
+        "group_patterns": [
+          "(.*pass.*)|(.*pw.*)"
+        ]
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "SensitiveDataLoggingV",
+      "brief_description": "Sensitive data may be logged",
+      "inspector": {
+        "pattern": "Log.v\\((.*?)\\)",
+        "group_patterns": [
+          "(.*pass.*)|(.*pw.*)"
+        ]
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
       "id": "PredictableRandom",
       "brief_description": "Predictable pseudorandom number generator",
       "inspector": {
