@@ -163,23 +163,77 @@
       "highlight_type": "WARNING"
     },
     {
-      "id": "PredictableRandom",
-      "brief_description": "Predictable pseudorandom number generator",
+      "id": "PasswordEncoder",
+      "brief_description": "Passwords should not be stored in plain-text or with a fast hashing algorithm",
       "inspector": {
-        "pattern": "new Random()",
+        "pattern": "StandardPasswordEncoder\\((.*?)\\)",
         "group_patterns": []
       },
       "fixes": [
         {
-          "name": "Use SecureRandom",
+          "name": "Improve security",
           "patterns": [
-            "Random"
+            "(StandardPasswordEncoder)"
           ],
           "strings": [
-            "SecureRandom"
+            "BCryptPasswordEncoder"
           ]
         }
       ],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "SecureRandomSeed",
+      "brief_description": "\"SecureRandom\" seeds should not be predictable",
+      "inspector": {
+        "pattern": "SecureRandom\\((.*?)\\)",
+        "group_patterns": [
+          "(.*)"
+        ]
+      },
+      "fixes": [
+        {
+          "name": "Improve security",
+          "patterns": [
+            "(SecureRandom.*)"
+          ],
+          "strings": [
+            "SecureRandom()"
+          ]
+        }
+      ],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "SSLContext",
+      "brief_description": "Weak SSL/TLS protocols should not be used",
+      "inspector": {
+        "pattern": "SSLContext.getInstance\\((.*?)\\)",
+        "group_patterns": [
+          "(.*SSLv3.*)"
+        ]
+      },
+      "fixes": [
+        {
+          "name": "Improve security by using TLSv1.2",
+          "patterns": [
+            "(.*SSLv3.*)"
+          ],
+          "strings": [
+            "TLSv1.2"
+          ]
+        }
+      ],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "NullCipher",
+      "brief_description": "NullCipher should not be used",
+      "inspector": {
+        "pattern": "NullCipher.getInstance()",
+        "group_patterns": []
+      },
+      "fixes": [],
       "highlight_type": "WARNING"
     },
     {
@@ -198,7 +252,97 @@
             "SHA1"
           ],
           "strings": [
-            "SHA256"
+            "SHA-256"
+          ]
+        }
+      ],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "CommandInjectionPotential",
+      "brief_description": "Potential Command Injection",
+      "inspector": {
+        "pattern": "Runtime.exec\\((.*?)\\)",
+        "group_patterns": [
+          "^.*\\+.*$"
+        ]
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "UntrustedServletContentType (HttpServletRequestWrapper)",
+      "brief_description": "Untrusted Content-Type header",
+      "inspector": {
+        "pattern": "HttpServletRequestWrapper.getContentType\\((.*?)\\)",
+        "group_patterns": []
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "UntrustedServletContentType",
+      "brief_description": "Untrusted Content-Type header",
+      "inspector": {
+        "pattern": "HttpServletRequest.getContentType\\((.*?)\\)",
+        "group_patterns": []
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "UntrustedServletServerName",
+      "brief_description": "Untrusted Hostname header",
+      "inspector": {
+        "pattern": "HttpServletRequest.getServerName\\((.*?)\\)",
+        "group_patterns": []
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "UntrustedServletServerName (HttpServletRequestWrapper)",
+      "brief_description": "Untrusted Hostname header",
+      "inspector": {
+        "pattern": "HttpServletRequestWrapper.getServerName\\((.*?)\\)",
+        "group_patterns": []
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+    {
+      "id": "UntrustedServletSessionId",
+      "brief_description": "Untrusted session cookie value",
+      "inspector": {
+        "pattern": "HttpServletRequest.getSession\\((.*?)\\)",
+        "group_patterns": []
+      },
+      "fixes": [],
+      "highlight_type": "WARNING"
+    },
+//  todo: line 618 Rules.xml
+
+
+
+
+
+
+
+    {
+      "id": "PredictableRandom",
+      "brief_description": "Predictable pseudorandom number generator",
+      "inspector": {
+        "pattern": "new Random()",
+        "group_patterns": []
+      },
+      "fixes": [
+        {
+          "name": "Use SecureRandom",
+          "patterns": [
+            "Random"
+          ],
+          "strings": [
+            "SecureRandom"
           ]
         }
       ],
