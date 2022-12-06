@@ -20,7 +20,8 @@
           ]
         }
       ],
-      "highlight_type": "WARNING"
+      "highlight_type": "WARNING",
+      "enabled": true
     },
     {
       "id": "PredictableRandom",
@@ -40,7 +41,8 @@
           ]
         }
       ],
-      "highlight_type": "WARNING"
+      "highlight_type": "WARNING",
+      "enabled": true
     },
     {
       "id": "MessageDigest",
@@ -62,7 +64,8 @@
           ]
         }
       ],
-      "highlight_type": "WARNING"
+      "highlight_type": "WARNING",
+      "enabled": true
     }
   ]
 }
