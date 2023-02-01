@@ -1,1 +1,1 @@
-# rules_storage
+Default ruleset storage for 9Fix2
