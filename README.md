@@ -1,1 +1,1 @@
-Default ruleset storage for 9Fix2
+# Default ruleset storage for ArmorDroid
