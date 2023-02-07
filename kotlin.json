@@ -2,7 +2,6 @@
   {
     "id": "WeakEncryptionAlgorithms ",
     "brief_description": "Use cipher algorithms intensively tested and promoted by the cryptographic community; with a block size inferior than 128 bits.",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "Cipher.getInstance\\((.*?)\\)",
       "group_patterns": [
@@ -26,7 +25,6 @@
   {
     "id": "WeakEncryptionAlgorithms ",
     "brief_description": "Use cipher algorithms intensively tested and promoted by the cryptographic community; with a block size inferior than 128 bits.",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "Cipher.getInstance\\((.*?)\\)",
       "group_patterns": [
@@ -50,7 +48,6 @@
   {
     "id": "WeakEncryptionAlgorithms ",
     "brief_description": "Use cipher algorithms intensively tested and promoted by the cryptographic community; with a block size inferior than 128 bits.",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "Cipher.getInstance\\((.*?)\\)",
       "group_patterns": [
@@ -74,7 +71,6 @@
   {
     "id": "WeakEncryptionAlgorithms ",
     "brief_description": "Use cipher algorithms intensively tested and promoted by the cryptographic community; with a block size inferior than 128 bits.",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "Cipher.getInstance\\((.*?)\\)",
       "group_patterns": [
@@ -98,7 +94,6 @@
   {
     "id": "WeakEncryptionAlgorithms ",
     "brief_description": "Use cipher algorithms intensively tested and promoted by the cryptographic community; with a block size inferior than 128 bits.",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "Cipher.getInstance\\((.*?)\\)",
       "group_patterns": [
@@ -122,7 +117,6 @@
   {
     "id": "RSAWrongModeandPaddingScheme",
     "brief_description": "(RSA Encryption Algorithms) Encryption operation mode and the padding scheme should be chosen appropriately",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "Cipher.getInstance\\((.*?)\\)",
       "group_patterns": [
@@ -146,7 +140,6 @@
   {
     "id": "InadequateCryptoraphicKeyPairLength",
     "brief_description": "Require a sufficient key size",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "KeyPairGenerator.getInstance('RSA').initialize\\((.*?)\\)",
       "group_patterns": [
@@ -170,7 +163,6 @@
   {
     "id": "InadequateECGenParameterSpec",
     "brief_description": "Cryptographic keys should be rubust",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "ECGenParameterSpec\\((.*?)\\)",
       "group_patterns": [
@@ -194,7 +186,6 @@
   {
     "id": "InadequateCryptographicKeyLength",
     "brief_description": "Require a sufficient key size",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "KeyGenerator.getInstance('AES').init\\((.*?)\\)",
       "group_patterns": [
@@ -218,7 +209,6 @@
   {
     "id": "WeakHashingAlgorithms",
     "brief_description": "Using weak hashing algorithms is security-sensitive",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "MessageDigest.getInstance\\((.*?)\\)",
       "group_patterns": [
@@ -260,7 +250,6 @@
   {
     "id": "PseudorandomNumberGenerators(PRNGs)",
     "brief_description": "Using pseudorandom number generators (PRNGs) is security-sensitive",
-    "category": "Cryptography",
     "inspector": {
       "pattern": "Random()",
       "fixes": [
@@ -281,7 +270,6 @@
   {
     "id": "WeakSSL/TLSProtocolsGetInstance",
     "brief_description": "Weak SSL/TLS protocols should not be used",
-    "category": "Networking",
     "inspector": {
       "pattern": "SSLContext.getInstance\\((.*?)\\)",
       "group_patterns": [
@@ -305,7 +293,6 @@
   {
     "id": "WeakSSL/TLSProtocolsTLSVersions",
     "brief_description": "Weak SSL/TLS protocols should not be used",
-    "category": "Networking",
     "inspector": {
       "pattern": "SSLContext.tlsVersions\\((.*?)\\)",
       "group_patterns": [
@@ -329,7 +316,6 @@
   {
     "id": "AccessingAndroidExternalStorage",
     "brief_description": "Accessing Android external storage is security-sensitive",
-    "category": "Data Storage",
     "inspector": {
       "pattern": "Context.getExternalFilesDir\\((.*?)\\)",
       "group_patterns": [
@@ -353,7 +339,6 @@
   {
     "id": "ReceivingIntents",
     "brief_description": "Receiving intents is security-sensitive",
-    "category": "Interprocess communication",
     "inspector": {
       "pattern": "Context.registerReceiver\\((.*?)\\)",
       "group_patterns": [
@@ -377,7 +362,6 @@
   {
     "id": "BroadcastingIntents",
     "brief_description": "Broadcasting intents is security-sensitive",
-    "category": "Interprocess communication",
     "inspector": {
       "pattern": "Context.sendBroadcast\\((.*?)\\)",
       "group_patterns": [
@@ -401,7 +385,6 @@
   {
     "id": "EnablingFileAccessforWebViews",
     "brief_description": "Enabling file access for WebViews is security-sensitive",
-    "category": "Interprocess communication",
     "inspector": {
       "pattern": "Webview.getSettings().setAllowContentAccess\\((.*?)\\)",
       "group_patterns": [
@@ -425,7 +408,6 @@
   {
     "id": "EnablingFileAccessforWebViews",
     "brief_description": "Enabling file access for WebViews is security-sensitive",
-    "category": "WebView",
     "inspector": {
       "pattern": "Webview.getSettings().setAllowContentAccess\\((.*?)\\)",
       "group_patterns": [
@@ -449,7 +431,6 @@
   {
     "id": "EnablingJavaScriptSupportforWebViews",
     "brief_description": "Enabling JavaScript support for WebViews is security-sensitive",
-    "category": "WebView",
     "inspector": {
       "pattern": "Webview.getSettings().setJavaScriptenabled\\((.*?)\\)",
       "group_patterns": [
@@ -473,7 +454,6 @@
   {
     "id": "DebugFeaturesActivated",
     "brief_description": "Delivering code in production with debug features activated is security-sensitive",
-    "category": "WebView",
     "inspector": {
       "pattern": "Webview.setWebContentsDebuggingenabled\\((.*?)\\)",
       "group_patterns": [
