@@ -13,7 +13,7 @@
         {
           "name": "Improve security by using AES/GCM/NoPadding",
           "patterns": [
-            "(.*AES[^\\/].*)"
+            "(AES)"
           ],
           "strings": [
             "AES/GCM/NoPadding"
