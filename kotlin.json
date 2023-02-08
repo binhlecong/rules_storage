@@ -252,7 +252,8 @@
       "id": "PseudorandomNumberGenerators(PRNGs)",
       "brief_description": "Using pseudorandom number generators (PRNGs) is security-sensitive",
       "inspector": {
-        "pattern": "Random()"
+        "pattern": "Random()",
+        "group_patterns": []
       },
       "fixes": [
         {
