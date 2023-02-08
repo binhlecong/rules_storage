@@ -9,7 +9,7 @@
       },
       "fixes": [
         {
-          "name": "In AndroidManifest.xml the android debuggable property is set to false",
+          "name": "In AndroidManifest.xml the android debuggable property should be set to false",
           "patterns": [
             "(true)"
           ],

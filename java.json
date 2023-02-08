@@ -24,6 +24,52 @@
       "enabled": true
     },
     {
+      "id": "CipherGetInstance",
+      "brief_description": "Default ECB mode should not be used",
+      "inspector": {
+        "pattern": "Cipher.getInstance\\((.*?)\\)",
+        "group_patterns": [
+          "(.*AES\\/CBC\\/PKCS5Padding.*)"
+        ]
+      },
+      "fixes": [
+        {
+          "name": "Improve security by using AES/GCM/NoPadding",
+          "patterns": [
+            "(AES\\/CBC\\/PKCS5Padding)"
+          ],
+          "strings": [
+            "AES/GCM/NoPadding"
+          ]
+        }
+      ],
+      "highlight_type": "WARNING",
+      "enabled": true
+    },
+    {
+      "id": "CipherGetInstance",
+      "brief_description": "Default ECB mode should not be used",
+      "inspector": {
+        "pattern": "Cipher.getInstance\\((.*?)\\)",
+        "group_patterns": [
+          "(.*AES\\/EBC\\/NoPadding.*)"
+        ]
+      },
+      "fixes": [
+        {
+          "name": "Improve security by using AES/GCM/NoPadding",
+          "patterns": [
+            "(AES\\/EBC\\/NoPadding)"
+          ],
+          "strings": [
+            "AES/GCM/NoPadding"
+          ]
+        }
+      ],
+      "highlight_type": "WARNING",
+      "enabled": true
+    },
+    {
       "id": "SensitiveDataLoggingW",
       "brief_description": "Sensitive data may be logged",
       "inspector": {
